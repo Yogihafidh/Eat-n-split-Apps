@@ -13,6 +13,7 @@ function App() {
   const [showAddFriend, setShowAddFriend] = useState(false);
   const [friends, setFriends] = useState(initialFriends); // Array include all objek
   const [selectedFriend, setSelectedFriend] = useState(null); // Objek selected
+  console.log(friends);
 
   function handleShowAddFriend() {
     setShowAddFriend((show) => !show);
@@ -63,6 +64,7 @@ function App() {
         <FormSplitBilling
           selectedFriend={selectedFriend}
           onSplitBill={handleSplitBill}
+          key={selectedFriend.id}
         />
       )}
     </div>
